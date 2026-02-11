@@ -31,7 +31,16 @@ const obj2 = { 3: "a", 4: "b" };
 
 // console.log(tinderUser);
 
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
-console.log(Object.entries(tinderUser));
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(Object.keys(tinderUser));
+// console.log(Object.values(tinderUser));
+// console.log(Object.entries(tinderUser));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+const course = {
+  coursename: "js in hindi",
+  price: "999",
+  courseInstructor: "rajesh",
+};
+
+const { courseInstructor: instructor } = course;
+console.log(instructor);
