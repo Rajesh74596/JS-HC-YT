@@ -17,25 +17,21 @@
 
     // const intervalID = setInterval(sayDate, 2000);
 
-    const rajesh = function () {
-      console.log("rajesh", Date.now());
+    let intervalId;
+
+    const start = function () {
+      intervalId = setInterval(text, 1000);
+
+      function text() {
+        console.log("this is so stupid");
+      }
     };
 
-    // setInterval(rajesh, 2000);
+    const stop = function () {
+      clearInterval(intervalId);
+    };
 
-    const start = document
-      .querySelector("#start")
-      .addEventListener("click", function () {
-        setInterval(rajesh, 1000);
-      });
-
-    const stopButton = clearInterval(start);
-
-    const stop = document
-      .querySelector("#stop")
-      .addEventListener("click", function () {
-        clearInterval(rajesh);
-        console.log("stopped");
-      });
+    document.querySelector("#start").addEventListener("click", start);
+    document.querySelector("#stop").addEventListener("click", stop);
   </script>
 </html>
